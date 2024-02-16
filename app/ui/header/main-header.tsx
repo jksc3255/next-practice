@@ -31,15 +31,16 @@ const MainHeader = () => {
     <header>
       <nav>
         <ul className="flex">
-          {title?.map((v, i) => {
+          {title.map((v, i) => {
             return (
-              <li key={`MAIN_GNB_${i}`} className="flex grow">
+              <li key={`MAIN_HEADER_LINK_${i}`} className="flex grow">
                 <Link
-                  href={`${v.link}`}
+                  href={`${v?.link}`}
                   style={{
-                    width: '100%',
                     display: 'block',
+                    width: '100%',
                     height: 40,
+                    fontWeight: '500',
                     textAlign: 'center',
                   }}
                 >
