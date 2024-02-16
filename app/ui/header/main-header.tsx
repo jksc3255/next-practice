@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 
 const MainHeader = () => {
   const [title, setTitle] = React.useState([
@@ -10,7 +10,7 @@ const MainHeader = () => {
       link: '/',
     },
     {
-      title: 'BioMedical DB',
+      title: 'BioMedical Db',
       link: '/bio-medical-db',
     },
     {
@@ -33,18 +33,17 @@ const MainHeader = () => {
         <ul className="flex">
           {title.map((v, i) => {
             return (
-              <li key={`MAIN_HEADER_LINK_${i}`} className="flex grow">
+              <li key={`MAIN_HEADER_LINK_${v?.link}`} className="flex grow">
                 <Link
-                  href={`${v?.link}`}
+                  href={`${v.link}`}
                   style={{
                     display: 'block',
                     width: '100%',
-                    height: 40,
                     fontWeight: '500',
                     textAlign: 'center',
                   }}
                 >
-                  {v?.title}
+                  {v.title}
                 </Link>
               </li>
             );
