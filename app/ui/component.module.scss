@@ -1,0 +1,21 @@
+.gnbNav {
+  & > ul {
+    display: flex;
+
+    & > li {
+      flex: 1;
+
+      & > .gnbLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        font-weight: 500;
+
+        &:hover {
+          color: dodgerblue;
+        }
+      }
+    }
+  }
+}
