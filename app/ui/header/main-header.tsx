@@ -1,52 +1,23 @@
-'use client';
-
+import { GNB } from '@/app/lib/define';
 import Link from 'next/link';
 import React from 'react';
 
 const MainHeader = () => {
-  const [title, setTitle] = React.useState([
-    {
-      title: 'Home',
-      link: '/',
-    },
-    {
-      title: 'BioMedical DB',
-      link: '/bio-medical-db',
-    },
-    {
-      title: 'Business',
-      link: '/business',
-    },
-    {
-      title: 'Community',
-      link: '/community',
-    },
-    {
-      title: 'About',
-      link: '/about',
-    },
-  ]);
-
   return (
     <header>
       <nav>
-        <ul className="flex">
-          {title.map((v, i) => {
+        <ul style={{ display: 'flex' }}>
+          {GNB.map((v) => {
             return (
-              <li
-                key={`MAIN_HEADER_LINK_${v.link}`}
-                className="flex grow"
-                style={{ alignItems: 'center', height: 40 }}
-              >
+              <li key={`GNB_LINK_${v.link}`} style={{ flex: 1 }}>
                 <Link
                   href={`${v.link}`}
                   style={{
                     display: 'flex',
-                    width: '100%',
-                    height: '100%',
-                    fontWeight: '500',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    height: 40,
+                    fontWeight: '500',
                   }}
                 >
                   {v.title}
