@@ -7,15 +7,13 @@ import styles from '@/app/ui/component.module.scss';
 
 const MainHeader = () => {
   return (
-    <header>
-      <nav className={styles.gnbNav}>
-        <ul style={{}}>
+    <header className={styles.mainHeader}>
+      <nav>
+        <ul>
           {GNB.map((v) => {
             return (
               <li key={`GNB_LINK_${v.link}`}>
-                <Link href={`${v.link}`} className={styles.gnbLink}>
-                  {v.title}
-                </Link>
+                <Link href={`${v.link}`}>{v.title}</Link>
               </li>
             );
           })}
