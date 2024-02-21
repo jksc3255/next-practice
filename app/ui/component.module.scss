@@ -1,4 +1,3 @@
-// MainHeader (메인 헤더)
 .mainHeader {
   & > nav {
     & > ul {
@@ -17,6 +16,11 @@
 
           &:hover {
             color: dodgerblue;
+          }
+
+          &.active {
+            color: dodgerblue;
+            font-weight: 700;
           }
         }
       }
