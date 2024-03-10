@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { GNB } from '@/app/lib/define';
+import { usePathname } from 'next/navigation';
 import styles from '@/app/ui/component.module.scss';
 import classNames from 'classnames';
-import { usePathname } from 'next/navigation';
+import { GNB } from '@/app/lib/define';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();

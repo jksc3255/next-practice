@@ -1,4 +1,7 @@
 .mainHeader {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
   & > nav > ul {
     display: flex;
     align-items: center;
