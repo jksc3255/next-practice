@@ -32,7 +32,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           </ul>
         </nav>
       </header>
-      {children}
+
+      <section>{children}</section>
       <footer></footer>
     </React.Fragment>
   );
