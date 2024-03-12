@@ -2,17 +2,19 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import styles from '@/app/ui/component.module.scss';
-import classNames from 'classnames';
 import { GNB } from '@/app/lib/define';
+import styles from '@/app/ui/component.module.scss';
+import classNames from 'classnames/bind';
+import { usePathname } from 'next/navigation';
+
+const cx = classNames.bind(styles);
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
     <React.Fragment>
-      <header className={styles.mainHeader}>
+      <header className={cx('mainHeader')}>
         <nav>
           <ul>
             {GNB.map((v) => {
@@ -20,10 +22,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
               return (
                 <li key={`GNB_LINK_${v.link}`}>
-                  <Link
-                    href={`${v.link}`}
-                    className={classNames([active && styles.active])}
-                  >
+                  <Link href={`${v.link}`} className={cx({ active })}>
                     {v.title}
                   </Link>
                 </li>
