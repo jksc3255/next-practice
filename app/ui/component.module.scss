@@ -1,9 +1,11 @@
-$blue: dodgerblue;
+$main: dodgerblue;
 
 .mainHeader {
   & > nav > ul {
     display: flex;
     align-items: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 
     & > li {
       flex: 1;
@@ -22,7 +24,7 @@ $blue: dodgerblue;
 
         &.active,
         &:hover {
-          color: $blue;
+          color: $main;
         }
       }
     }

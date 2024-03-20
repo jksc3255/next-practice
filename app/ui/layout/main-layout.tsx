@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from '@/app/ui/component.module.scss';
 import classNames from 'classnames/bind';
 import { GNB } from '@/app/lib/define';
-import Link from 'next/link';
 
 const cx = classNames.bind(styles);
 
