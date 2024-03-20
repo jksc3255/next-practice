@@ -1,6 +1,6 @@
-.mainHeader {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+$blue: dodgerblue;
 
+.mainHeader {
   & > nav > ul {
     display: flex;
     align-items: center;
@@ -19,9 +19,10 @@
         &.active {
           font-weight: 700;
         }
+
         &.active,
         &:hover {
-          color: dodgerblue;
+          color: $blue;
         }
       }
     }
